@@ -1,0 +1,9 @@
+.error-message p {
+  margin: 0;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ff0000;
+}
