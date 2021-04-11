@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import messageIcon from '../../assets/simple-icon.PNG';
-import arrowIcon from '../../assets/arrow.png';
 import './SignUpForm.css';
+import DropDown from '../DropDown/DropDown';
 
 const SignUpForm = () => {
   const [bizName, setBizName] = useState('');
@@ -53,6 +53,12 @@ const SignUpForm = () => {
     }
   };
 
+  const resetThenSet = (item) => {
+    console.log(item);
+
+    setTicketSystem(item);
+  };
+
   return (
     <form onSubmit={handleSubmit} className="registration-form">
       <div className="form-heading">
@@ -84,26 +90,24 @@ const SignUpForm = () => {
           />
           {renderFormError('bizWebsite')}
         </div>
-        <div className="custom-select">
-          <select
-            value={ticketSystem}
-            onChange={(e) => setTicketSystem(e.target.value)}
-            required
-            style={{ backgroundImage: arrowIcon }}
-          >
-            <option selected="selected" value="" hidden>
-              Select Your Ticketing System
-            </option>
-            <option>Zendesk</option>
-            <option>Intercom</option>
-            <option>Gorgias</option>
-          </select>
+        <div className="registration-input">
+          <DropDown
+            title={'Select your ticketing system'}
+            list={[
+              { id: 1, title: 'Zendesk' },
+              { id: 2, title: 'Intercom' },
+              { id: 3, title: 'Gorgias' },
+            ]}
+            resetThenSet={resetThenSet}
+          />{' '}
           {renderFormError('ticketSystem')}
         </div>
+
         <div className="registration-input">
           <input
             placeholder="Your email"
             id="email-input"
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -135,7 +139,7 @@ const SignUpForm = () => {
         </div>
       </div>
       <button type="submit" className="signup-button">
-        Sign up
+        Sign-up
       </button>{' '}
     </form>
   );
