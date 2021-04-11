@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome';
+import arrowIcon from '../../assets/arrow.png';
 import './DropDown.css';
 
 export default class DropDown extends Component {
@@ -38,11 +38,7 @@ export default class DropDown extends Component {
       <div className="dd-wrapper">
         <button type="button" className="dd-header" onClick={this.toggleList}>
           <div className="dd-header-title">{headerTitle}</div>
-          {isListOpen ? (
-            <FontAwesome name="angle-up" size="1x" />
-          ) : (
-            <FontAwesome name="angle-down" size="1x" />
-          )}
+          <img src={arrowIcon} alt="drop-down-arrow" />
         </button>
         {isListOpen && (
           <div className="dd-list-container">
@@ -54,7 +50,7 @@ export default class DropDown extends Component {
                   key={item.id}
                   onClick={() => this.selectItem(item)}
                 >
-                  {item.title} {item.selected && <FontAwesome name="check" />}
+                  {item.title}
                 </button>
               ))}
             </div>
