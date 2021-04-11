@@ -1,15 +1,15 @@
-# Simplr.ai Coding Challenge
+# Coding Challenge
 
 Table of Contents:\
 \
 [Summary](#summary)\
 [Technologies Used](#technologies-used)\
 [What I Learned](#what-i-learned)\
-[Core Decisions](#core-decisions-for-discussion)\
+[Core Decisions](#core-decisions-for-discussion)
 
 ## Summary
 
-This application was developed as part of a coding challenge to solve the following problem: https://github.com/OneviewCommerce/typescript-react-redux-test, as well as for practice utilizing TypeScript, Redux, Jest, and React.
+This application was developed as part of a coding challenge to replicate a Figma file of an online sign-up form.
 
 ## Technologies Used
 
@@ -24,3 +24,5 @@ This project was a good learning experience for using CSS to conform to someone 
 ## Core decisions for discussion
 
 1. I chose to move the Drop Down into another isolated component, 1 to show that I can modularize components to make them more reusable, and 2 because after trying to get the drop down to work with select & option elements I realized that I was going to need to look for a more custom component solution in order to get it to look like the design.
+
+2. Currently the form stores changes to the inputs in state, but doesn't do anything on submission since that was not included in the assignment. I would be happy to refactor it to group the data and send a POST request or anything like that if so desired.
