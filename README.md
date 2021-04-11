@@ -14,7 +14,7 @@ This application was developed as part of a coding challenge to replicate a Figm
 ## Technologies Used
 
 - Create-React-App - boilerplate setup for React, initiated for this application with npx create-react-app --template typescript
-- React Hooks - this project is built using React Hooks and functional components as well as one class component
+- React Hooks - this project is built using React Hooks and functional components as well as one class component just to demonstrate understanding of both.
 - CSS 3 - I chose to use vanilla CSS to style this form to show my capability to use CSS3, but am certainly open to using CSS in JS like styled components, or a preprocessor like SASS
 
 ## What I Learned
