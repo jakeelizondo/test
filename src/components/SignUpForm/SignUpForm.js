@@ -54,8 +54,6 @@ const SignUpForm = () => {
   };
 
   const resetThenSet = (item) => {
-    console.log(item);
-
     setTicketSystem(item);
   };
 
